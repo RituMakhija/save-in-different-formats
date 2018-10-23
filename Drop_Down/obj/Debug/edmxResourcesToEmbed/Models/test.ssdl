@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="testModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'test.dbo.tbl_entryDate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_entryDate">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Name" Type="varchar" MaxLength="20" />
+    <Property Name="Password" Type="varchar" MaxLength="20" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'test.dbo.tbl_saveFormat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_saveFormat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FormatType" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="testModelStoreContainer">
+    <EntitySet Name="tbl_entryDate" EntityType="Self.tbl_entryDate" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_entryDate].[Name] AS [Name], 
+    [tbl_entryDate].[Password] AS [Password], 
+    [tbl_entryDate].[id] AS [id]
+    FROM [dbo].[tbl_entryDate] AS [tbl_entryDate]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_saveFormat" EntityType="Self.tbl_saveFormat" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_saveFormat].[id] AS [id], 
+    [tbl_saveFormat].[FormatType] AS [FormatType]
+    FROM [dbo].[tbl_saveFormat] AS [tbl_saveFormat]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

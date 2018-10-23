@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="testModelStoreContainer" CdmEntityContainer="testEntities">
+    <EntitySetMapping Name="tbl_saveFormat">
+      <EntityTypeMapping TypeName="testModel.tbl_saveFormat">
+        <MappingFragment StoreEntitySet="tbl_saveFormat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="FormatType" ColumnName="FormatType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_entryDate">
+      <EntityTypeMapping TypeName="testModel.tbl_entryDate">
+        <MappingFragment StoreEntitySet="tbl_entryDate">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

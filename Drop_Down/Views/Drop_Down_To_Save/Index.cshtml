@@ -1,0 +1,16 @@
+﻿@model Drop_Down.Models.SaveType
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+    
+   
+        @Html.DropDownListFor(model=>model.saved, (IEnumerable<SelectListItem>)ViewBag.ExemploList,"select Format")
+   
+        <input type="submit" value="Submit" />
+}
+
+
